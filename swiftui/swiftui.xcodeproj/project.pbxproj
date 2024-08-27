@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE0AA8662C7E3A3E0083EA38 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AA8652C7E3A3E0083EA38 /* LoginView.swift */; };
+		EE0AA8682C7E3C4E0083EA38 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AA8672C7E3C4E0083EA38 /* SplashView.swift */; };
+		EE0AA86A2C7E3C870083EA38 /* NavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AA8692C7E3C870083EA38 /* NavigationStackView.swift */; };
 		EE373F152C7E224F008332B4 /* swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE373F142C7E224F008332B4 /* swiftuiApp.swift */; };
 		EE373F172C7E224F008332B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE373F162C7E224F008332B4 /* ContentView.swift */; };
 		EE373F192C7E2251008332B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE373F182C7E2251008332B4 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE0AA8652C7E3A3E0083EA38 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EE0AA8672C7E3C4E0083EA38 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		EE0AA8692C7E3C870083EA38 /* NavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackView.swift; sourceTree = "<group>"; };
 		EE373F112C7E224F008332B4 /* swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE373F142C7E224F008332B4 /* swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftuiApp.swift; sourceTree = "<group>"; };
 		EE373F162C7E224F008332B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,7 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				EE373F142C7E224F008332B4 /* swiftuiApp.swift */,
+				EE0AA8672C7E3C4E0083EA38 /* SplashView.swift */,
+				EE0AA8692C7E3C870083EA38 /* NavigationStackView.swift */,
 				EE373F162C7E224F008332B4 /* ContentView.swift */,
+				EE0AA8652C7E3A3E0083EA38 /* LoginView.swift */,
 				EE373F182C7E2251008332B4 /* Assets.xcassets */,
 				EE373F1A2C7E2251008332B4 /* swiftui.entitlements */,
 				EE373F1B2C7E2251008332B4 /* Preview Content */,
@@ -259,7 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE0AA8662C7E3A3E0083EA38 /* LoginView.swift in Sources */,
+				EE0AA8682C7E3C4E0083EA38 /* SplashView.swift in Sources */,
 				EE373F172C7E224F008332B4 /* ContentView.swift in Sources */,
+				EE0AA86A2C7E3C870083EA38 /* NavigationStackView.swift in Sources */,
 				EE373F152C7E224F008332B4 /* swiftuiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
