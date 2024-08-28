@@ -12,6 +12,16 @@
 		EE06DE3B2C7EE33600520DB3 /* MultiOrbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE3A2C7EE33600520DB3 /* MultiOrbit.swift */; };
 		EE06DE3D2C7EE3E800520DB3 /* ClockRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE3C2C7EE3E800520DB3 /* ClockRotation.swift */; };
 		EE06DE3F2C7EE85D00520DB3 /* Rotation2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE3E2C7EE85D00520DB3 /* Rotation2D.swift */; };
+		EE06DE432C7EEC9700520DB3 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE422C7EEC9700520DB3 /* NetworkingService.swift */; };
+		EE06DE462C7EEF7200520DB3 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE452C7EEF7200520DB3 /* Character.swift */; };
+		EE06DE482C7EEFE500520DB3 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE472C7EEFE500520DB3 /* Location.swift */; };
+		EE06DE4A2C7EF00200520DB3 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE492C7EF00200520DB3 /* Episode.swift */; };
+		EE06DE4D2C7EF0C800520DB3 /* CharacterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE4C2C7EF0C800520DB3 /* CharacterRow.swift */; };
+		EE06DE4F2C7EF0E500520DB3 /* EpisodeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE4E2C7EF0E500520DB3 /* EpisodeRow.swift */; };
+		EE06DE512C7EF11700520DB3 /* LocationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE502C7EF11700520DB3 /* LocationRow.swift */; };
+		EE06DE532C7EF41600520DB3 /* DashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE522C7EF41600520DB3 /* DashBoardView.swift */; };
+		EE06DE552C7EF45600520DB3 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE542C7EF45600520DB3 /* TabBarView.swift */; };
+		EE06DE572C7EF4E200520DB3 /* ListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE562C7EF4E200520DB3 /* ListScreen.swift */; };
 		EE0AA8662C7E3A3E0083EA38 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AA8652C7E3A3E0083EA38 /* LoginView.swift */; };
 		EE0AA8682C7E3C4E0083EA38 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AA8672C7E3C4E0083EA38 /* SplashView.swift */; };
 		EE0AA86A2C7E3C870083EA38 /* NavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AA8692C7E3C870083EA38 /* NavigationStackView.swift */; };
@@ -47,6 +57,16 @@
 		EE06DE3A2C7EE33600520DB3 /* MultiOrbit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiOrbit.swift; sourceTree = "<group>"; };
 		EE06DE3C2C7EE3E800520DB3 /* ClockRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockRotation.swift; sourceTree = "<group>"; };
 		EE06DE3E2C7EE85D00520DB3 /* Rotation2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotation2D.swift; sourceTree = "<group>"; };
+		EE06DE422C7EEC9700520DB3 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		EE06DE452C7EEF7200520DB3 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		EE06DE472C7EEFE500520DB3 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		EE06DE492C7EF00200520DB3 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		EE06DE4C2C7EF0C800520DB3 /* CharacterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRow.swift; sourceTree = "<group>"; };
+		EE06DE4E2C7EF0E500520DB3 /* EpisodeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeRow.swift; sourceTree = "<group>"; };
+		EE06DE502C7EF11700520DB3 /* LocationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRow.swift; sourceTree = "<group>"; };
+		EE06DE522C7EF41600520DB3 /* DashBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardView.swift; sourceTree = "<group>"; };
+		EE06DE542C7EF45600520DB3 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		EE06DE562C7EF4E200520DB3 /* ListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreen.swift; sourceTree = "<group>"; };
 		EE0AA8652C7E3A3E0083EA38 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		EE0AA8672C7E3C4E0083EA38 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		EE0AA8692C7E3C870083EA38 /* NavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackView.swift; sourceTree = "<group>"; };
@@ -107,19 +127,40 @@
 			path = animation;
 			sourceTree = "<group>";
 		};
-		EE06DE402C7EEBF900520DB3 /* Services */ = {
+		EE06DE402C7EEBF900520DB3 /* services */ = {
 			isa = PBXGroup;
 			children = (
 				EE06DE412C7EEC0600520DB3 /* Combine */,
 			);
-			path = Services;
+			path = services;
 			sourceTree = "<group>";
 		};
 		EE06DE412C7EEC0600520DB3 /* Combine */ = {
 			isa = PBXGroup;
 			children = (
+				EE06DE422C7EEC9700520DB3 /* NetworkingService.swift */,
 			);
 			path = Combine;
+			sourceTree = "<group>";
+		};
+		EE06DE442C7EEF4500520DB3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				EE06DE452C7EEF7200520DB3 /* Character.swift */,
+				EE06DE472C7EEFE500520DB3 /* Location.swift */,
+				EE06DE492C7EF00200520DB3 /* Episode.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		EE06DE4B2C7EF0AF00520DB3 /* row */ = {
+			isa = PBXGroup;
+			children = (
+				EE06DE4C2C7EF0C800520DB3 /* CharacterRow.swift */,
+				EE06DE4E2C7EF0E500520DB3 /* EpisodeRow.swift */,
+				EE06DE502C7EF11700520DB3 /* LocationRow.swift */,
+			);
+			path = row;
 			sourceTree = "<group>";
 		};
 		EE373F082C7E224F008332B4 = {
@@ -145,7 +186,9 @@
 		EE373F132C7E224F008332B4 /* swiftui */ = {
 			isa = PBXGroup;
 			children = (
-				EE06DE402C7EEBF900520DB3 /* Services */,
+				EE06DE4B2C7EF0AF00520DB3 /* row */,
+				EE06DE442C7EEF4500520DB3 /* model */,
+				EE06DE402C7EEBF900520DB3 /* services */,
 				EE06DE392C7EE32300520DB3 /* animation */,
 				EE06DE342C7ED67900520DB3 /* extension */,
 				EE373F142C7E224F008332B4 /* swiftuiApp.swift */,
@@ -153,6 +196,9 @@
 				EE0AA8692C7E3C870083EA38 /* NavigationStackView.swift */,
 				EE373F162C7E224F008332B4 /* ContentView.swift */,
 				EE0AA8652C7E3A3E0083EA38 /* LoginView.swift */,
+				EE06DE522C7EF41600520DB3 /* DashBoardView.swift */,
+				EE06DE542C7EF45600520DB3 /* TabBarView.swift */,
+				EE06DE562C7EF4E200520DB3 /* ListScreen.swift */,
 				EE373F182C7E2251008332B4 /* Assets.xcassets */,
 				EE373F1A2C7E2251008332B4 /* swiftui.entitlements */,
 				EE373F1B2C7E2251008332B4 /* Preview Content */,
@@ -318,11 +364,21 @@
 				EE06DE3D2C7EE3E800520DB3 /* ClockRotation.swift in Sources */,
 				EE0AA8662C7E3A3E0083EA38 /* LoginView.swift in Sources */,
 				EE0AA8682C7E3C4E0083EA38 /* SplashView.swift in Sources */,
+				EE06DE462C7EEF7200520DB3 /* Character.swift in Sources */,
 				EE06DE362C7ED69F00520DB3 /* StringExtension.swift in Sources */,
 				EE06DE382C7EDDC400520DB3 /* ViewExtension.swift in Sources */,
+				EE06DE552C7EF45600520DB3 /* TabBarView.swift in Sources */,
+				EE06DE482C7EEFE500520DB3 /* Location.swift in Sources */,
 				EE06DE3F2C7EE85D00520DB3 /* Rotation2D.swift in Sources */,
 				EE373F172C7E224F008332B4 /* ContentView.swift in Sources */,
+				EE06DE4A2C7EF00200520DB3 /* Episode.swift in Sources */,
+				EE06DE4D2C7EF0C800520DB3 /* CharacterRow.swift in Sources */,
 				EE0AA86A2C7E3C870083EA38 /* NavigationStackView.swift in Sources */,
+				EE06DE4F2C7EF0E500520DB3 /* EpisodeRow.swift in Sources */,
+				EE06DE432C7EEC9700520DB3 /* NetworkingService.swift in Sources */,
+				EE06DE572C7EF4E200520DB3 /* ListScreen.swift in Sources */,
+				EE06DE512C7EF11700520DB3 /* LocationRow.swift in Sources */,
+				EE06DE532C7EF41600520DB3 /* DashBoardView.swift in Sources */,
 				EE06DE3B2C7EE33600520DB3 /* MultiOrbit.swift in Sources */,
 				EE373F152C7E224F008332B4 /* swiftuiApp.swift in Sources */,
 			);
@@ -497,7 +553,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
@@ -535,7 +591,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
