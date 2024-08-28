@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE06DE362C7ED69F00520DB3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE352C7ED69F00520DB3 /* StringExtension.swift */; };
+		EE06DE382C7EDDC400520DB3 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE372C7EDDC400520DB3 /* ViewExtension.swift */; };
+		EE06DE3B2C7EE33600520DB3 /* MultiOrbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE3A2C7EE33600520DB3 /* MultiOrbit.swift */; };
+		EE06DE3D2C7EE3E800520DB3 /* ClockRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE3C2C7EE3E800520DB3 /* ClockRotation.swift */; };
+		EE06DE3F2C7EE85D00520DB3 /* Rotation2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE3E2C7EE85D00520DB3 /* Rotation2D.swift */; };
 		EE0AA8662C7E3A3E0083EA38 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AA8652C7E3A3E0083EA38 /* LoginView.swift */; };
 		EE0AA8682C7E3C4E0083EA38 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AA8672C7E3C4E0083EA38 /* SplashView.swift */; };
 		EE0AA86A2C7E3C870083EA38 /* NavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AA8692C7E3C870083EA38 /* NavigationStackView.swift */; };
@@ -37,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE06DE352C7ED69F00520DB3 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		EE06DE372C7EDDC400520DB3 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		EE06DE3A2C7EE33600520DB3 /* MultiOrbit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiOrbit.swift; sourceTree = "<group>"; };
+		EE06DE3C2C7EE3E800520DB3 /* ClockRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockRotation.swift; sourceTree = "<group>"; };
+		EE06DE3E2C7EE85D00520DB3 /* Rotation2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotation2D.swift; sourceTree = "<group>"; };
 		EE0AA8652C7E3A3E0083EA38 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		EE0AA8672C7E3C4E0083EA38 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		EE0AA8692C7E3C870083EA38 /* NavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackView.swift; sourceTree = "<group>"; };
@@ -78,6 +88,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE06DE342C7ED67900520DB3 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				EE06DE352C7ED69F00520DB3 /* StringExtension.swift */,
+				EE06DE372C7EDDC400520DB3 /* ViewExtension.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		EE06DE392C7EE32300520DB3 /* animation */ = {
+			isa = PBXGroup;
+			children = (
+				EE06DE3A2C7EE33600520DB3 /* MultiOrbit.swift */,
+				EE06DE3C2C7EE3E800520DB3 /* ClockRotation.swift */,
+				EE06DE3E2C7EE85D00520DB3 /* Rotation2D.swift */,
+			);
+			path = animation;
+			sourceTree = "<group>";
+		};
+		EE06DE402C7EEBF900520DB3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EE06DE412C7EEC0600520DB3 /* Combine */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EE06DE412C7EEC0600520DB3 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
 		EE373F082C7E224F008332B4 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +145,9 @@
 		EE373F132C7E224F008332B4 /* swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				EE06DE402C7EEBF900520DB3 /* Services */,
+				EE06DE392C7EE32300520DB3 /* animation */,
+				EE06DE342C7ED67900520DB3 /* extension */,
 				EE373F142C7E224F008332B4 /* swiftuiApp.swift */,
 				EE0AA8672C7E3C4E0083EA38 /* SplashView.swift */,
 				EE0AA8692C7E3C870083EA38 /* NavigationStackView.swift */,
@@ -268,10 +315,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE06DE3D2C7EE3E800520DB3 /* ClockRotation.swift in Sources */,
 				EE0AA8662C7E3A3E0083EA38 /* LoginView.swift in Sources */,
 				EE0AA8682C7E3C4E0083EA38 /* SplashView.swift in Sources */,
+				EE06DE362C7ED69F00520DB3 /* StringExtension.swift in Sources */,
+				EE06DE382C7EDDC400520DB3 /* ViewExtension.swift in Sources */,
+				EE06DE3F2C7EE85D00520DB3 /* Rotation2D.swift in Sources */,
 				EE373F172C7E224F008332B4 /* ContentView.swift in Sources */,
 				EE0AA86A2C7E3C870083EA38 /* NavigationStackView.swift in Sources */,
+				EE06DE3B2C7EE33600520DB3 /* MultiOrbit.swift in Sources */,
 				EE373F152C7E224F008332B4 /* swiftuiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,21 +12,48 @@ struct LoginView: View {
     @State private var password:String = ""
     @State private var showingAlert = false
     @State private var isAuthenticated = false
+    
+    @State var degreesRotating = 0.0
+    
     var body: some View {
         VStack {
             Spacer()
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
+                .rotationEffect(.degrees(degreesRotating))
+            
+            
             TextField(
-                "Enter Login Id ..",
+                "",
                 text: $loginname
             )
-            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+            .placeholder(when: loginname.isEmpty) {
+                    Text("Enter Login Id ..").foregroundColor(.black)
+            } //Textfield when empty then we can create a placeholder and when we implement this we don't need to put text in first parameter if we put then we have two text that will not good for our dewsign
+//            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+            .font(.title3)
             .padding()
-            SecureField("Enter Password", text: $password)
-                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                .padding()
+            .background(
+            RoundedRectangle(cornerRadius : 10)
+                .strokeBorder(Color.gray, lineWidth: 1)
+                .background(
+                    RoundedRectangle(cornerRadius : 10).fill(Color.white))
+            )
+            SecureField("", text: $password)
+                .placeholder(when: password.isEmpty) {
+                        Text("Enter Password").foregroundColor(.black)
+                } //Textfield when empty then we can create a placeholder and when we implement this we don't need to put text in first parameter
+//                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                .font(.title3)
+                .padding() // padding inside the textfield
+                .background( // set background view
+                RoundedRectangle(cornerRadius : 10) // shape as rounded rectangle
+                    .strokeBorder(Color.gray, lineWidth: 1) //stroke color for textview
+                    .background(
+                        RoundedRectangle(cornerRadius : 10)
+                            .fill(Color.white))
+                )
             Button("Login") {
                 if loginname.count > 5 && password.count > 8 {
                     isAuthenticated = true
@@ -34,8 +61,14 @@ struct LoginView: View {
                     showingAlert = true
                 }
             }
-            .border(.blue, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-            .padding(20)
+//            .border(.blue, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+            .font(.headline) // change font size and weight
+            .foregroundColor(.white) //Text Color
+            .padding(20) // padding inside the button
+            .background(Color.primary) //background color
+            .cornerRadius(10)  //rounded corners
+            .shadow(color: .gray, radius: 5, x: 0, y: 2) //shadow effect
+            //.padding(20)
             HStack {
                 
                 NavigationLink {
@@ -73,7 +106,14 @@ struct LoginView: View {
 //            })
 //            )
 //        }
+        .onAppear {
+                      withAnimation(.linear(duration: 1)
+                          .speed(0.2).repeatForever(autoreverses: false)) {
+                              degreesRotating = 360.0
+                          }
+                  }
     }
+        
 }
 
 #Preview {
