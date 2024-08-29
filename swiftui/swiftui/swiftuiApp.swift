@@ -12,7 +12,8 @@ struct swiftuiApp: App {
     var body: some Scene {
         WindowGroup {
             //LoginView()
-            ListScreen()
+//            ListScreen()
+            SplashView()
         }
     }
 }

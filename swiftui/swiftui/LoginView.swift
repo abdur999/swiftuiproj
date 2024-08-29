@@ -61,28 +61,37 @@ struct LoginView: View {
                     showingAlert = true
                 }
             }
-//            .border(.blue, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+
             .font(.headline) // change font size and weight
             .foregroundColor(.white) //Text Color
             .padding(20) // padding inside the button
-            .background(Color.primary) //background color
+            .background(Color.green) //background color
             .cornerRadius(10)  //rounded corners
             .shadow(color: .gray, radius: 5, x: 0, y: 2) //shadow effect
-            //.padding(20)
             HStack {
                 
                 NavigationLink {
-//                    RegisterView()
+                    RegisterView()
                 } label: {
                         Text("Register")
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        .font(.headline) // change font size and weight
+                        .foregroundColor(.white) //Text Color
+                        .padding(20) // padding inside the button
+                        .background(Color.green) //background color
+                        .cornerRadius(10)  //rounded corners
+                        .shadow(color: .gray, radius: 5, x: 0, y: 2) //shadow effect
                    }
                 Spacer()
                 NavigationLink {
-//                    ForgotPasswordView()
+                    ForgotPasswordView()
                 } label: {
                         Text("Forgot Password")
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        .font(.headline) // change font size and weight
+                        .foregroundColor(.white) //Text Color
+                        .padding(20) // padding inside the button
+                        .background(Color.green) //background color
+                        .cornerRadius(10)  //rounded corners
+                        .shadow(color: .gray, radius: 5, x: 0, y: 2) //shadow effect
                    }
                 
             }
@@ -92,20 +101,20 @@ struct LoginView: View {
         }
         .padding()
         
-//        NavigationLink(destination: ListScreen(), isActive: $isAuthenticated) {
-//            
-//        }
-//        .alert(isPresented: $showingAlert) {
-//            Alert(title: Text("Warning"),
-//                  message: Text("At least 5 character for loginid and password should be 8 character long"),
-//                  primaryButton: .destructive(Text("Ok")) {
-//                showingAlert = false
-//            },
-//            secondaryButton: .cancel({
-//                showingAlert = false
-//            })
-//            )
-//        }
+        NavigationLink(destination: ListScreen(), isActive: $isAuthenticated) {
+            
+        }
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Warning"),
+                  message: Text("At least 5 character for loginid and password should be 8 character long"),
+                  primaryButton: .destructive(Text("Ok")) {
+                showingAlert = false
+            },
+            secondaryButton: .cancel({
+                showingAlert = false
+            })
+            )
+        }
         .onAppear {
                       withAnimation(.linear(duration: 1)
                           .speed(0.2).repeatForever(autoreverses: false)) {

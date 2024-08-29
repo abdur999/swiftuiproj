@@ -11,17 +11,17 @@ struct TabBarView: View {
    
     var body: some View {
         TabView {
-            ListTab(title: "List1", id: 10)
+            ListTab(title: "Character", id: 10)
                 .tabItem {
-                    Label("Tab 1", systemImage: "list.bullet")
+                    Label("Character", systemImage: "list.bullet")
                 }
-            ListTab(title: "List2", id: 20)
+            ListTab(title: "Location", id: 20)
                 .tabItem {
-                    Label("Tab 2", systemImage: "list.bullet")
+                    Label("Location", systemImage: "heart.fill")
                 }
-            ListTab(title: "List3", id: 30)
+            ListTab(title: "Episode", id: 30)
                 .tabItem {
-                    Label("Tab 2", systemImage: "list.bullet")
+                    Label("Episode", systemImage: "person.crop.circle.fill.badge.plus")
                 }
         }
         .onAppear(){

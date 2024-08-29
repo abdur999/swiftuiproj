@@ -12,6 +12,7 @@ struct SplashView: View {
     var body: some View {
         if isActive {
             NavigationStackView()
+                .navigationBarBackButtonHidden(true)
         }
         else {
                 Text("Splash Screen")
