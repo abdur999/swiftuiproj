@@ -8,12 +8,48 @@
 import Foundation
 import Combine
 
+enum NetworkError: Error {
+    case invalidURL
+    case invalidResponse
+    case decodingError
+    case serverError(Error)
+    case unknownError
+}
+
+
 @Observable
 class NetworkingService {
     var characters:[Ccharacter] = []
     var locations:[Location] = []
     var episodes:[Episode] = []
     var subscription = Set<AnyCancellable>()
+    
+    //Networking Service using MVVM
+    func fetchCharacterArray() -> AnyPublisher<CharacterResponse, NetworkError> {
+        guard let url = URL(string: "https://rickandmortyapi.com/api/character") else {
+            return Fail(error: NetworkError.invalidURL).eraseToAnyPublisher()
+        }
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .tryMap { result -> Data in
+                
+                guard let httpResponse = result.response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+                    throw NetworkError.serverError(NSError(domain: "", code: (result.response as? HTTPURLResponse)? .statusCode ?? 500, userInfo: nil))
+                }
+                return result.data
+            }
+            .decode(type: CharacterResponse.self, decoder: JSONDecoder())
+            .mapError {
+                error in
+                if let error = error as? DecodingError {
+                    return NetworkError.decodingError
+                } else if let error = error as? NetworkError {
+                    return error
+                } else {
+                    return NetworkError.unknownError
+                }
+            }
+            .eraseToAnyPublisher()
+    }
     
     func fetchCharacters() {
         guard let url = URL(string: "https://rickandmortyapi.com/api/character") else {

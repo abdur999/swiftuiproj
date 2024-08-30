@@ -29,6 +29,9 @@
 		EE0AA8682C7E3C4E0083EA38 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AA8672C7E3C4E0083EA38 /* SplashView.swift */; };
 		EE0AA86A2C7E3C870083EA38 /* NavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AA8692C7E3C870083EA38 /* NavigationStackView.swift */; };
 		EE0E6B812C8031B500D1AAA1 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0E6B802C8031B500D1AAA1 /* CustomNavigationBar.swift */; };
+		EE0E6B852C8053AF00D1AAA1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0E6B842C8053AF00D1AAA1 /* LoginViewModel.swift */; };
+		EE0E6B872C8053C400D1AAA1 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0E6B862C8053C400D1AAA1 /* RegistrationViewModel.swift */; };
+		EE0E6B8A2C8053EE00D1AAA1 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0E6B892C8053EE00D1AAA1 /* ForgotPasswordViewModel.swift */; };
 		EE373F152C7E224F008332B4 /* swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE373F142C7E224F008332B4 /* swiftuiApp.swift */; };
 		EE373F172C7E224F008332B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE373F162C7E224F008332B4 /* ContentView.swift */; };
 		EE373F192C7E2251008332B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE373F182C7E2251008332B4 /* Assets.xcassets */; };
@@ -36,6 +39,7 @@
 		EE373F272C7E2251008332B4 /* swiftuiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE373F262C7E2251008332B4 /* swiftuiTests.swift */; };
 		EE373F312C7E2251008332B4 /* swiftuiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE373F302C7E2251008332B4 /* swiftuiUITests.swift */; };
 		EE373F332C7E2251008332B4 /* swiftuiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE373F322C7E2251008332B4 /* swiftuiUITestsLaunchTests.swift */; };
+		EEC534012C81811D002E96DC /* CharacterReponseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC534002C81811D002E96DC /* CharacterReponseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,9 @@
 		EE0AA8672C7E3C4E0083EA38 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		EE0AA8692C7E3C870083EA38 /* NavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackView.swift; sourceTree = "<group>"; };
 		EE0E6B802C8031B500D1AAA1 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		EE0E6B842C8053AF00D1AAA1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		EE0E6B862C8053C400D1AAA1 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		EE0E6B892C8053EE00D1AAA1 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		EE373F112C7E224F008332B4 /* swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE373F142C7E224F008332B4 /* swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftuiApp.swift; sourceTree = "<group>"; };
 		EE373F162C7E224F008332B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +96,7 @@
 		EE373F2C2C7E2251008332B4 /* swiftuiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftuiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE373F302C7E2251008332B4 /* swiftuiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftuiUITests.swift; sourceTree = "<group>"; };
 		EE373F322C7E2251008332B4 /* swiftuiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftuiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EEC534002C81811D002E96DC /* CharacterReponseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterReponseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +179,36 @@
 			path = row;
 			sourceTree = "<group>";
 		};
+		EE0E6B822C804F6700D1AAA1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EE373F142C7E224F008332B4 /* swiftuiApp.swift */,
+				EE0E6B802C8031B500D1AAA1 /* CustomNavigationBar.swift */,
+				EE0AA8672C7E3C4E0083EA38 /* SplashView.swift */,
+				EE0AA8692C7E3C870083EA38 /* NavigationStackView.swift */,
+				EE373F162C7E224F008332B4 /* ContentView.swift */,
+				EE0AA8652C7E3A3E0083EA38 /* LoginView.swift */,
+				EE06DE582C7F01B400520DB3 /* RegisterView.swift */,
+				EE06DE5A2C7F01E800520DB3 /* ForgotPasswordView.swift */,
+				EE06DE5C2C7F021E00520DB3 /* OTPView.swift */,
+				EE06DE522C7EF41600520DB3 /* DashBoardView.swift */,
+				EE06DE542C7EF45600520DB3 /* TabBarView.swift */,
+				EE06DE562C7EF4E200520DB3 /* ListScreen.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		EE0E6B832C804F7E00D1AAA1 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EE0E6B842C8053AF00D1AAA1 /* LoginViewModel.swift */,
+				EE0E6B862C8053C400D1AAA1 /* RegistrationViewModel.swift */,
+				EE0E6B892C8053EE00D1AAA1 /* ForgotPasswordViewModel.swift */,
+				EEC534002C81811D002E96DC /* CharacterReponseViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
 		EE373F082C7E224F008332B4 = {
 			isa = PBXGroup;
 			children = (
@@ -194,23 +232,13 @@
 		EE373F132C7E224F008332B4 /* swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				EE0E6B832C804F7E00D1AAA1 /* viewModel */,
+				EE0E6B822C804F6700D1AAA1 /* view */,
 				EE06DE4B2C7EF0AF00520DB3 /* row */,
 				EE06DE442C7EEF4500520DB3 /* model */,
 				EE06DE402C7EEBF900520DB3 /* services */,
 				EE06DE392C7EE32300520DB3 /* animation */,
 				EE06DE342C7ED67900520DB3 /* extension */,
-				EE373F142C7E224F008332B4 /* swiftuiApp.swift */,
-				EE0E6B802C8031B500D1AAA1 /* CustomNavigationBar.swift */,
-				EE0AA8672C7E3C4E0083EA38 /* SplashView.swift */,
-				EE0AA8692C7E3C870083EA38 /* NavigationStackView.swift */,
-				EE373F162C7E224F008332B4 /* ContentView.swift */,
-				EE0AA8652C7E3A3E0083EA38 /* LoginView.swift */,
-				EE06DE582C7F01B400520DB3 /* RegisterView.swift */,
-				EE06DE5A2C7F01E800520DB3 /* ForgotPasswordView.swift */,
-				EE06DE5C2C7F021E00520DB3 /* OTPView.swift */,
-				EE06DE522C7EF41600520DB3 /* DashBoardView.swift */,
-				EE06DE542C7EF45600520DB3 /* TabBarView.swift */,
-				EE06DE562C7EF4E200520DB3 /* ListScreen.swift */,
 				EE373F182C7E2251008332B4 /* Assets.xcassets */,
 				EE373F1A2C7E2251008332B4 /* swiftui.entitlements */,
 				EE373F1B2C7E2251008332B4 /* Preview Content */,
@@ -386,8 +414,12 @@
 				EE06DE3F2C7EE85D00520DB3 /* Rotation2D.swift in Sources */,
 				EE373F172C7E224F008332B4 /* ContentView.swift in Sources */,
 				EE0E6B812C8031B500D1AAA1 /* CustomNavigationBar.swift in Sources */,
+				EE0E6B852C8053AF00D1AAA1 /* LoginViewModel.swift in Sources */,
 				EE06DE4A2C7EF00200520DB3 /* Episode.swift in Sources */,
+				EEC534012C81811D002E96DC /* CharacterReponseViewModel.swift in Sources */,
+				EE0E6B8A2C8053EE00D1AAA1 /* ForgotPasswordViewModel.swift in Sources */,
 				EE06DE5B2C7F01E800520DB3 /* ForgotPasswordView.swift in Sources */,
+				EE0E6B872C8053C400D1AAA1 /* RegistrationViewModel.swift in Sources */,
 				EE06DE4D2C7EF0C800520DB3 /* CharacterRow.swift in Sources */,
 				EE0AA86A2C7E3C870083EA38 /* NavigationStackView.swift in Sources */,
 				EE06DE4F2C7EF0E500520DB3 /* EpisodeRow.swift in Sources */,

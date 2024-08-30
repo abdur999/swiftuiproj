@@ -30,15 +30,29 @@ struct TabBarView: View {
     }
 }
 struct ListTab:View {
+    //Define ViewModel object here
+   @StateObject private var characterViewModel = CharacterReponseViewModel()
     var vm = NetworkingService()
     let title:String
     let id:Int
     var body: some View {
         VStack {
             if(id==10) {
-                List(vm.characters) { character in
-                    CharacterRow(character: character)
+                //Implement using mvvm pattern
+                if let data = characterViewModel.data {
+                    List(data.results) {
+                        character in
+                        CharacterRow(character: character)
+                    }
                 }
+                else if let errorMessage = characterViewModel.errorMessage{
+                  Text ("Error: \(errorMessage)")
+                } else {
+                    Text("Loading")
+                }
+//                List(vm.characters) { character in
+//                    CharacterRow(character: character)
+//                }
             }
             if id == 20 {
                 List(vm.episodes) { episode in
@@ -54,8 +68,9 @@ struct ListTab:View {
         }
         .onAppear() {
             if(id == 10) {
-                vm.fetchCharacters()
-                
+                //vm.fetchCharacters()
+                //implement mvvm here
+                characterViewModel.loadData()
             }
             if(id == 20) {
                 vm.fetchEpisodeData()
