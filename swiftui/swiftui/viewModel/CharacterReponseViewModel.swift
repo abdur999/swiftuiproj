@@ -14,6 +14,28 @@ class CharacterReponseViewModel: ObservableObject {
     @Published var errorMessage:String?
     private let networkService = NetworkingService()
     
+    func loadDataGeneric() {
+        networkService.fetchAny(strUrl: "https://rickandmortyapi.com/api/character", responseType: CharacterResponse.self)
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: {
+                [weak self]
+                completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    self?.handleError(error)
+                }
+            },
+            receiveValue:{
+                [weak self]
+                    data in
+                    self?.data = data
+                
+            })
+            .store(in: &cancellable)
+    }
+    
     func loadData() {
         networkService.fetchCharacterArray()
             .receive(on: DispatchQueue.main)

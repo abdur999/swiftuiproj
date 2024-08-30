@@ -68,9 +68,15 @@ struct ListTab:View {
         }
         .onAppear() {
             if(id == 10) {
+                //implement default one
                 //vm.fetchCharacters()
+                
+                
                 //implement mvvm here
-                characterViewModel.loadData()
+//                characterViewModel.loadData()
+                
+                //implement using generic way
+                characterViewModel.loadDataGeneric()
             }
             if(id == 20) {
                 vm.fetchEpisodeData()
