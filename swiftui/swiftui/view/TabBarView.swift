@@ -29,15 +29,48 @@ struct TabBarView: View {
         }
     }
 }
-struct ListTab:View {
+struct ListTab:View, CharacterViewProtocol {
+    func updateView(with data: CharacterResponse) {
+        viewModel.data = data
+    }
+    
+    func showError(_ message: String) {
+      errorMessage = message
+    }
+    
+    func showLoader(_ show: Bool) {
+        showLoader = show
+    }
+    
+    //Use MVP to get data
+    @StateObject private var viewModel = CharacterPresenterViewModel()
+    @State private var showLoader = false
+    @State private var errorMessage:String?
+    
     //Define ViewModel object here
-   @StateObject private var characterViewModel = CharacterReponseViewModel()
+//   @StateObject private var characterViewModel = CharacterReponseViewModel()
     var vm = NetworkingService()
     let title:String
     let id:Int
     var body: some View {
         VStack {
             if(id==10) {
+                
+                //Implement using MVP pattern
+                if showLoader {
+                    ProgressView("Loading")
+                }
+                else if let data = viewModel.data {
+                    List(data.results) {
+                        character in
+                        CharacterRow(character: character)
+                    }
+                }
+                else if let error = errorMessage {
+                    Text ("Error: \(error)").foregroundColor(.red)
+                }
+                
+                /* Commenting MVP
                 //Implement using mvvm pattern
                 if let data = characterViewModel.data {
                     List(data.results) {
@@ -50,6 +83,7 @@ struct ListTab:View {
                 } else {
                     Text("Loading")
                 }
+                */
 //                List(vm.characters) { character in
 //                    CharacterRow(character: character)
 //                }
@@ -76,7 +110,11 @@ struct ListTab:View {
 //                characterViewModel.loadData()
                 
                 //implement using generic way
-                characterViewModel.loadDataGeneric()
+//                characterViewModel.loadDataGeneric()
+                
+                //implement using MVP
+                viewModel.presenter.attachView(self)
+                viewModel.presenter.fetchData()
             }
             if(id == 20) {
                 vm.fetchEpisodeData()

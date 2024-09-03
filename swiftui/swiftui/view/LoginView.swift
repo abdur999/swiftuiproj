@@ -34,6 +34,7 @@ struct LoginView: View {
 //            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
             .font(.title3)
             .padding()
+            .foregroundColor(.black)
             .background(
             RoundedRectangle(cornerRadius : 10)
                 .strokeBorder(Color.gray, lineWidth: 1)
@@ -47,6 +48,7 @@ struct LoginView: View {
 //                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                 .font(.title3)
                 .padding() // padding inside the textfield
+                .foregroundColor(.black)
                 .background( // set background view
                 RoundedRectangle(cornerRadius : 10) // shape as rounded rectangle
                     .strokeBorder(Color.gray, lineWidth: 1) //stroke color for textview

@@ -42,6 +42,7 @@ struct RegisterView: View {
             //            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
             .font(.title3)
             .padding()
+            .foregroundColor(.black)
             .background(
                 RoundedRectangle(cornerRadius : 10)
                     .strokeBorder(Color.gray, lineWidth: 1)
@@ -57,6 +58,7 @@ struct RegisterView: View {
             } //Textfield when empty then we can create a placeholder and when we implement this we don't need to put text in first parameter if we put then we have two text that will not good for our dewsign
             .font(.title3)
             .padding()
+            .foregroundColor(.black)
             .background(
                 RoundedRectangle(cornerRadius : 10)
                     .strokeBorder(Color.gray, lineWidth: 1)
@@ -70,6 +72,7 @@ struct RegisterView: View {
             //Textfield when empty then we can create a placeholder and when we implement this we don't need to put text in first parameter if we put then we have two text that will not good for our dewsign
                 .font(.title3)
                 .padding()
+                .foregroundColor(.black)
                 .background(
                     RoundedRectangle(cornerRadius : 10)
                         .strokeBorder(Color.gray, lineWidth: 1)
@@ -83,6 +86,7 @@ struct RegisterView: View {
             //Textfield when empty then we can create a placeholder and when we implement this we don't need to put text in first parameter if we put then we have two text that will not good for our dewsign
                 .font(.title3)
                 .padding()
+                .foregroundColor(.black)
                 .background(
                     RoundedRectangle(cornerRadius : 10)
                         .strokeBorder(Color.gray, lineWidth: 1)

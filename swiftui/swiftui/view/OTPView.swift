@@ -39,6 +39,7 @@ struct OTPView: View {
                 ))
                 .frame(width: 50, height: 50)
                 .multilineTextAlignment(.center)
+                .foregroundColor(.white)
                 .border(Color.gray, width: 1)
                 .keyboardType(.numberPad)
                 .onTapGesture {

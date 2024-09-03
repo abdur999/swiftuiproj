@@ -69,6 +69,8 @@ class CharacterReponseViewModel: ObservableObject {
             errorMessage = "Server responded with status code \(statusCode)"
         case .unknownError:
             errorMessage = "An unknown error occured"
+        case .requestFailed(_):
+            errorMessage = "URLRequest failed"
         }
     }
 }
