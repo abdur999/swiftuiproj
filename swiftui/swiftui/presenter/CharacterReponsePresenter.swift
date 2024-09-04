@@ -24,7 +24,6 @@ class CharacterPresenterViewModel:ObservableObject {
 protocol CharacterReponsePresenterProtocol:AnyObject {
     func fetchData()
     func attachView(_ view: CharacterViewProtocol)
-//    func fetchAnyForPresenter<T:Decodable>(strUrl:String) -> AnyPublisher<T, NetworkError>
 }
 class CharacterReponsePresenter:CharacterReponsePresenterProtocol {
 //    func attachView(_ view: any CharacterReponsePresenterProtocol) {

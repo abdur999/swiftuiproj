@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ForgotPasswordView: View {
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @State private var email: String = ""
     @State private var isEmailVerified:Bool = false
@@ -24,19 +25,20 @@ struct ForgotPasswordView: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding(.top,40)
+                .foregroundColor(colorScheme == .dark ? .white : .black)
             TextField("", text: $email)
                 .placeholder(when: email.isEmpty) {
-                        Text("Enter your email address").foregroundColor(.black)
+                        Text("Enter your email address").foregroundColor(colorScheme == .dark ? .black : .white)
                 } //Textfield when empty then we can create a placeholder and when we implement this we don't need to put text in first parameter if we put then we have two text that will not good for our dewsign
         //            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                 .font(.title3)
                 .padding()
-                .foregroundColor(.black)
+                .foregroundColor(colorScheme == .dark ? .black : .white)
                 .background(
                 RoundedRectangle(cornerRadius : 10)
                     .strokeBorder(Color.gray, lineWidth: 1)
                     .background(
-                        RoundedRectangle(cornerRadius : 10).fill(Color.white))
+                        RoundedRectangle(cornerRadius : 10).fill(colorScheme == .dark ? .white : .black))
                 )
             
             Button(action: {
@@ -59,10 +61,10 @@ struct ForgotPasswordView: View {
                 if isOtpSend {
                     Text("Resend Otp")
                         .font(.headline)
-                        .foregroundColor(.white)
+                        .foregroundColor(colorScheme == .dark ? .black : .white)
                         .padding()
                         .frame(width: 220, height: 60)
-                        .background(Color.green)
+                        .background(colorScheme == .dark ? .red : .green)
                         .cornerRadius(15.0)
                 }
                 else {
@@ -71,7 +73,7 @@ struct ForgotPasswordView: View {
                         .foregroundColor(.white)
                         .padding()
                         .frame(width: 220, height: 60)
-                        .background(Color.green)
+                        .background(colorScheme == .dark ? .green : .red)
                         .cornerRadius(15.0)
                 }
             }
@@ -90,7 +92,7 @@ struct ForgotPasswordView: View {
                         .foregroundColor(.white)
                         .padding()
                         .frame(width: 220, height: 60)
-                        .background(Color.green)
+                        .background(colorScheme == .dark ? .green : .red)
                         .cornerRadius(15.0)
                     
                 }

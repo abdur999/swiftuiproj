@@ -12,6 +12,7 @@ struct LoginView: View {
     @State private var password:String = ""
     @State private var showingAlert = false
     @State private var isAuthenticated = false
+    @Environment(\.colorScheme) var colorScheme
     
     @State var degreesRotating = 0.0
     
@@ -29,32 +30,32 @@ struct LoginView: View {
                 text: $loginname
             )
             .placeholder(when: loginname.isEmpty) {
-                    Text("Enter Login Id ..").foregroundColor(.black)
+                    Text("Enter Login Id ..").foregroundColor(colorScheme == .dark ? .black : .white)
             } //Textfield when empty then we can create a placeholder and when we implement this we don't need to put text in first parameter if we put then we have two text that will not good for our dewsign
 //            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
             .font(.title3)
             .padding()
-            .foregroundColor(.black)
+            .foregroundColor(colorScheme == .dark ? .white : .black)
             .background(
             RoundedRectangle(cornerRadius : 10)
-                .strokeBorder(Color.gray, lineWidth: 1)
+                .strokeBorder((colorScheme == .dark ? .white : .black), lineWidth: 1)
                 .background(
-                    RoundedRectangle(cornerRadius : 10).fill(Color.white))
+                    RoundedRectangle(cornerRadius : 10).fill(colorScheme == .dark ? .white : .black))
             )
             SecureField("", text: $password)
                 .placeholder(when: password.isEmpty) {
-                        Text("Enter Password").foregroundColor(.black)
+                        Text("Enter Password").foregroundColor(colorScheme == .dark ? .black : .white)
                 } //Textfield when empty then we can create a placeholder and when we implement this we don't need to put text in first parameter
 //                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                 .font(.title3)
                 .padding() // padding inside the textfield
-                .foregroundColor(.black)
+                .foregroundColor(colorScheme == .dark ? .white : .black)
                 .background( // set background view
                 RoundedRectangle(cornerRadius : 10) // shape as rounded rectangle
                     .strokeBorder(Color.gray, lineWidth: 1) //stroke color for textview
                     .background(
                         RoundedRectangle(cornerRadius : 10)
-                            .fill(Color.white))
+                            .fill(colorScheme == .dark ? .white : .black))
                 )
             Button("Login") {
                 if loginname.count > 5 && password.count > 8 {
@@ -67,7 +68,7 @@ struct LoginView: View {
             .font(.headline) // change font size and weight
             .foregroundColor(.white) //Text Color
             .padding(20) // padding inside the button
-            .background(Color.green) //background color
+            .background(colorScheme == .dark ? .red : .green) //background color
             .cornerRadius(10)  //rounded corners
             .shadow(color: .gray, radius: 5, x: 0, y: 2) //shadow effect
             HStack {
@@ -79,7 +80,7 @@ struct LoginView: View {
                         .font(.headline) // change font size and weight
                         .foregroundColor(.white) //Text Color
                         .padding(20) // padding inside the button
-                        .background(Color.green) //background color
+                        .background(colorScheme == .dark ? .red : .green) //background color
                         .cornerRadius(10)  //rounded corners
                         .shadow(color: .gray, radius: 5, x: 0, y: 2) //shadow effect
                    }
@@ -91,7 +92,7 @@ struct LoginView: View {
                         .font(.headline) // change font size and weight
                         .foregroundColor(.white) //Text Color
                         .padding(20) // padding inside the button
-                        .background(Color.green) //background color
+                        .background(colorScheme == .dark ? .red : .green) //background color
                         .cornerRadius(10)  //rounded corners
                         .shadow(color: .gray, radius: 5, x: 0, y: 2) //shadow effect
                    }

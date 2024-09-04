@@ -29,8 +29,14 @@ struct TabBarView: View {
         }
     }
 }
-struct ListTab:View, CharacterViewProtocol {
-    func updateView(with data: CharacterResponse) {
+
+struct ListTab:View /*, CharacterViewProtocol */ {
+    
+    @ObservedObject var viewModelViper = CharacterView()
+    
+    //CharacterViewProtocol is for MVVM and ListTabProtocol for viper
+    /* MVP functionality changed to viper so this need to commented
+     func updateView(with data: CharacterResponse) {
         viewModel.data = data
     }
     
@@ -41,11 +47,12 @@ struct ListTab:View, CharacterViewProtocol {
     func showLoader(_ show: Bool) {
         showLoader = show
     }
+     */
     
-    //Use MVP to get data
-    @StateObject private var viewModel = CharacterPresenterViewModel()
-    @State private var showLoader = false
-    @State private var errorMessage:String?
+    //Use MVP model variable storage for get data
+//    @StateObject private var viewModel = CharacterPresenterViewModel()
+//    @State private var showLoader = false
+//    @State private var errorMessage:String?
     
     //Define ViewModel object here
 //   @StateObject private var characterViewModel = CharacterReponseViewModel()
@@ -56,7 +63,20 @@ struct ListTab:View, CharacterViewProtocol {
         VStack {
             if(id==10) {
                 
+                if viewModelViper.isLoading {
+                               ProgressView("Loading...")
+                    }
+                else if let data = viewModelViper.data {
+                    List(data.results) {
+                        character in
+                        CharacterRow(character: character)
+                    }
+                } else if let errorMessage = viewModelViper.errorMessage {
+                    Text("Error: \(errorMessage)").foregroundColor(.red)
+                }
+                
                 //Implement using MVP pattern
+                /* Commenting the MVP implementation as we implement viper
                 if showLoader {
                     ProgressView("Loading")
                 }
@@ -69,6 +89,7 @@ struct ListTab:View, CharacterViewProtocol {
                 else if let error = errorMessage {
                     Text ("Error: \(error)").foregroundColor(.red)
                 }
+                */
                 
                 /* Commenting MVP
                 //Implement using mvvm pattern
@@ -113,8 +134,11 @@ struct ListTab:View, CharacterViewProtocol {
 //                characterViewModel.loadDataGeneric()
                 
                 //implement using MVP
-                viewModel.presenter.attachView(self)
-                viewModel.presenter.fetchData()
+//                viewModel.presenter.attachView(self)
+//                viewModel.presenter.fetchData()
+                
+                //Implement using Viper
+                viewModelViper.fetchData()
             }
             if(id == 20) {
                 vm.fetchEpisodeData()

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SplashView: View {
+    @Environment(\.colorScheme) var colorScheme
     @State private var isActive = false
     var body: some View {
         if isActive {
@@ -17,8 +18,8 @@ struct SplashView: View {
         else {
                 Text("Splash Screen")
                     .font(.largeTitle)
-                    .foregroundColor(.white)
-                    .background(.green)
+                    .foregroundColor(colorScheme == .dark ? .red : .green)
+                    .background(colorScheme == .dark ? .red : .green)
                     .padding()
                     .onAppear{
                         DispatchQueue.main.asyncAfter(deadline: .now()+5) {
@@ -28,7 +29,7 @@ struct SplashView: View {
                         }
                     }
             
-            .background(.green)
+            .background(colorScheme == .dark ? .red :.green)
         }
     }
 }

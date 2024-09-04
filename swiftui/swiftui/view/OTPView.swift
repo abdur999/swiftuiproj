@@ -10,7 +10,7 @@ import SwiftUI
 struct OTPView: View {
     @State private var otp: [String] = ["", "", "", ""]
     @FocusState private var currentIndex: Int?
-    
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         HStack(spacing: 10) {
             ForEach(0..<4) { index in
@@ -39,7 +39,7 @@ struct OTPView: View {
                 ))
                 .frame(width: 50, height: 50)
                 .multilineTextAlignment(.center)
-                .foregroundColor(.white)
+                .foregroundColor(colorScheme == .dark ? .white : .black)
                 .border(Color.gray, width: 1)
                 .keyboardType(.numberPad)
                 .onTapGesture {

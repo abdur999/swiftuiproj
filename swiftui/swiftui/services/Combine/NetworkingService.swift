@@ -17,13 +17,45 @@ enum NetworkError: Error {
     case requestFailed(Error)
 }
 
+protocol NetworkingServiceProtocol {
+    func fetchAnyForViper<T:Decodable>(strUrl:String) -> AnyPublisher<T, NetworkError>
+}
 
 @Observable
-class NetworkingService {
+class NetworkingService : NetworkingServiceProtocol { //Added for Viper
     var characters:[Ccharacter] = []
     var locations:[Location] = []
     var episodes:[Episode] = []
     var subscription = Set<AnyCancellable>()
+    
+    
+    //Networking Service using Genric retun type for Viper Used In Interactor
+    func fetchAnyForViper<T:Decodable>(strUrl:String) -> AnyPublisher<T, NetworkError> {
+        guard let url = URL(string: strUrl ) else {
+            return Fail(error: NetworkError.invalidURL).eraseToAnyPublisher()
+        }
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .tryMap { data, response in
+                guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+                    throw NetworkError.invalidResponse
+                }
+                return data
+            }
+            .decode(type: T.self, decoder: JSONDecoder())
+            .mapError {
+                error in
+                if let _ = error as? DecodingError {
+                    return NetworkError.decodingError
+                } else if let _ = error as? URLError {
+                    return NetworkError.invalidURL
+                } else {
+                    return NetworkError.unknownError
+                }
+            }
+               
+        .eraseToAnyPublisher()
+         
+    }
     
     //Networking Service using Genric retun type for MVP Presenter
     func fetchAnyForPresenter<T:Decodable>(strUrl:String) -> AnyPublisher<T, NetworkError> {

@@ -41,6 +41,10 @@
 		EE373F332C7E2251008332B4 /* swiftuiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE373F322C7E2251008332B4 /* swiftuiUITestsLaunchTests.swift */; };
 		EEC534012C81811D002E96DC /* CharacterReponseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC534002C81811D002E96DC /* CharacterReponseViewModel.swift */; };
 		EEC534042C81A127002E96DC /* CharacterReponsePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC534032C81A127002E96DC /* CharacterReponsePresenter.swift */; };
+		EED3F3072C8841F50042EE2A /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED3F3062C8841F50042EE2A /* CharacterView.swift */; };
+		EEE7619E2C8749610094AD20 /* CharacterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE7619D2C8749610094AD20 /* CharacterRouter.swift */; };
+		EEE761A02C87497A0094AD20 /* CharacterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE7619F2C87497A0094AD20 /* CharacterInteractor.swift */; };
+		EEE761A22C8768440094AD20 /* CharacterResponseViperPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE761A12C8768440094AD20 /* CharacterResponseViperPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +103,10 @@
 		EE373F322C7E2251008332B4 /* swiftuiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftuiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EEC534002C81811D002E96DC /* CharacterReponseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterReponseViewModel.swift; sourceTree = "<group>"; };
 		EEC534032C81A127002E96DC /* CharacterReponsePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterReponsePresenter.swift; sourceTree = "<group>"; };
+		EED3F3062C8841F50042EE2A /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		EEE7619D2C8749610094AD20 /* CharacterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRouter.swift; sourceTree = "<group>"; };
+		EEE7619F2C87497A0094AD20 /* CharacterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInteractor.swift; sourceTree = "<group>"; };
+		EEE761A12C8768440094AD20 /* CharacterResponseViperPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterResponseViperPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +242,9 @@
 		EE373F132C7E224F008332B4 /* swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				EED3F3052C88387C0042EE2A /* ViperView */,
+				EEE7619C2C87487C0094AD20 /* Router */,
+				EEE7619B2C8748530094AD20 /* Interactor */,
 				EEC534022C81A103002E96DC /* presenter */,
 				EE0E6B832C804F7E00D1AAA1 /* viewModel */,
 				EE0E6B822C804F6700D1AAA1 /* view */,
@@ -278,8 +289,33 @@
 			isa = PBXGroup;
 			children = (
 				EEC534032C81A127002E96DC /* CharacterReponsePresenter.swift */,
+				EEE761A12C8768440094AD20 /* CharacterResponseViperPresenter.swift */,
 			);
 			path = presenter;
+			sourceTree = "<group>";
+		};
+		EED3F3052C88387C0042EE2A /* ViperView */ = {
+			isa = PBXGroup;
+			children = (
+				EED3F3062C8841F50042EE2A /* CharacterView.swift */,
+			);
+			path = ViperView;
+			sourceTree = "<group>";
+		};
+		EEE7619B2C8748530094AD20 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EEE7619F2C87497A0094AD20 /* CharacterInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EEE7619C2C87487C0094AD20 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EEE7619D2C8749610094AD20 /* CharacterRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,8 +452,10 @@
 				EE0AA8662C7E3A3E0083EA38 /* LoginView.swift in Sources */,
 				EE06DE5D2C7F021E00520DB3 /* OTPView.swift in Sources */,
 				EE0AA8682C7E3C4E0083EA38 /* SplashView.swift in Sources */,
+				EEE7619E2C8749610094AD20 /* CharacterRouter.swift in Sources */,
 				EE06DE592C7F01B400520DB3 /* RegisterView.swift in Sources */,
 				EE06DE462C7EEF7200520DB3 /* Character.swift in Sources */,
+				EEE761A02C87497A0094AD20 /* CharacterInteractor.swift in Sources */,
 				EE06DE362C7ED69F00520DB3 /* StringExtension.swift in Sources */,
 				EE06DE382C7EDDC400520DB3 /* ViewExtension.swift in Sources */,
 				EE06DE552C7EF45600520DB3 /* TabBarView.swift in Sources */,
@@ -425,6 +463,7 @@
 				EE06DE3F2C7EE85D00520DB3 /* Rotation2D.swift in Sources */,
 				EEC534042C81A127002E96DC /* CharacterReponsePresenter.swift in Sources */,
 				EE373F172C7E224F008332B4 /* ContentView.swift in Sources */,
+				EED3F3072C8841F50042EE2A /* CharacterView.swift in Sources */,
 				EE0E6B812C8031B500D1AAA1 /* CustomNavigationBar.swift in Sources */,
 				EE0E6B852C8053AF00D1AAA1 /* LoginViewModel.swift in Sources */,
 				EE06DE4A2C7EF00200520DB3 /* Episode.swift in Sources */,
@@ -436,6 +475,7 @@
 				EE0AA86A2C7E3C870083EA38 /* NavigationStackView.swift in Sources */,
 				EE06DE4F2C7EF0E500520DB3 /* EpisodeRow.swift in Sources */,
 				EE06DE432C7EEC9700520DB3 /* NetworkingService.swift in Sources */,
+				EEE761A22C8768440094AD20 /* CharacterResponseViperPresenter.swift in Sources */,
 				EE06DE572C7EF4E200520DB3 /* ListScreen.swift in Sources */,
 				EE06DE512C7EF11700520DB3 /* LocationRow.swift in Sources */,
 				EE06DE532C7EF41600520DB3 /* DashBoardView.swift in Sources */,
