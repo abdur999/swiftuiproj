@@ -8,13 +8,30 @@
 import Foundation
 import Combine
 
-enum NetworkError: Error {
+enum NetworkError: LocalizedError {
     case invalidURL
     case invalidResponse
     case decodingError
     case serverError(Error)
     case unknownError
     case requestFailed(Error)
+    
+    var errorDescription: String? {
+        switch self {
+        case .invalidURL:
+            return "Invalid request URL not found"
+        case .invalidResponse:
+            return "Invalid Response"
+        case .decodingError:
+            return "Failed to decode"
+        case .serverError(let reason):
+            return "Validation Error: \(reason)"
+        case .requestFailed(let error):
+            return "Request failed and error is \(error)"
+        case .unknownError:
+            return "The server returned data in an unexpected format. Try updating the app."
+        }
+    }
 }
 
 protocol NetworkingServiceProtocol {
@@ -245,4 +262,51 @@ class NetworkingService : NetworkingServiceProtocol { //Added for Viper
                 .store(in: &subscription)
         }
     */
+    
+    func urlCall<T:Decodable>(type:T.Type,url: URL, retryCount:Int, delay: TimeInterval) -> AnyPublisher<T, Error> {
+        
+        return URLSession.shared.dataTaskPublisher(for: url)
+          // handle URL errors (most likely not able to connect to the server)
+          .mapError { error in
+              if let _ = error as? DecodingError {
+                  return NetworkError.decodingError
+              } else if let _ = error as? URLError {
+                  return NetworkError.invalidResponse
+              } else {
+                  return NetworkError.unknownError
+              }
+          }
+          .retry(retryCount)
+          .delay(for: .seconds(delay), scheduler: RunLoop.main)
+          // handle all other errors
+          .tryMap { 
+              (data, response) -> (data: Data, response: URLResponse) in
+            print("Received response from server, now checking status code")
+            
+            guard let urlResponse = response as? HTTPURLResponse else {
+              throw NetworkError.invalidResponse
+            }
+            
+              guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+                  throw NetworkError.invalidResponse
+              }
+            
+              let decoder = JSONDecoder()
+              let apiError = try decoder.decode(T.self, from: data)
+              
+              if urlResponse.statusCode == 400 {
+                  throw NetworkError.invalidResponse
+              }
+              
+            
+            return (data, response)
+          }
+     
+          .map(\.data)
+          .decode(type: T.self, decoder: JSONDecoder())
+//          .map(\.isAvailable) //When look for specific param on it like isAvailable in this case
+    //      .replaceError(with: false) //When error means false
+          .eraseToAnyPublisher()
+      }
+    
 }

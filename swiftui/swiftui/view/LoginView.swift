@@ -119,11 +119,15 @@ struct LoginView: View {
             )
         }
         .onAppear {
+                    let api = ApiCall()
+                    api.callurl()
                       withAnimation(.linear(duration: 1)
                           .speed(0.2).repeatForever(autoreverses: false)) {
                               degreesRotating = 360.0
                           }
+                    
                   }
+        
     }
         
 }

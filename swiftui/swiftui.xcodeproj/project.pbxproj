@@ -39,6 +39,7 @@
 		EE373F272C7E2251008332B4 /* swiftuiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE373F262C7E2251008332B4 /* swiftuiTests.swift */; };
 		EE373F312C7E2251008332B4 /* swiftuiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE373F302C7E2251008332B4 /* swiftuiUITests.swift */; };
 		EE373F332C7E2251008332B4 /* swiftuiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE373F322C7E2251008332B4 /* swiftuiUITestsLaunchTests.swift */; };
+		EE3CAB472C89BC1E00D48067 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3CAB462C89BC1E00D48067 /* ApiCall.swift */; };
 		EEC534012C81811D002E96DC /* CharacterReponseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC534002C81811D002E96DC /* CharacterReponseViewModel.swift */; };
 		EEC534042C81A127002E96DC /* CharacterReponsePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC534032C81A127002E96DC /* CharacterReponsePresenter.swift */; };
 		EED3F3072C8841F50042EE2A /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED3F3062C8841F50042EE2A /* CharacterView.swift */; };
@@ -101,6 +102,7 @@
 		EE373F2C2C7E2251008332B4 /* swiftuiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftuiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE373F302C7E2251008332B4 /* swiftuiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftuiUITests.swift; sourceTree = "<group>"; };
 		EE373F322C7E2251008332B4 /* swiftuiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftuiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EE3CAB462C89BC1E00D48067 /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
 		EEC534002C81811D002E96DC /* CharacterReponseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterReponseViewModel.swift; sourceTree = "<group>"; };
 		EEC534032C81A127002E96DC /* CharacterReponsePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterReponsePresenter.swift; sourceTree = "<group>"; };
 		EED3F3062C8841F50042EE2A /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				EE06DE422C7EEC9700520DB3 /* NetworkingService.swift */,
+				EE3CAB462C89BC1E00D48067 /* ApiCall.swift */,
 			);
 			path = Combine;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				EEC534012C81811D002E96DC /* CharacterReponseViewModel.swift in Sources */,
 				EE0E6B8A2C8053EE00D1AAA1 /* ForgotPasswordViewModel.swift in Sources */,
 				EE06DE5B2C7F01E800520DB3 /* ForgotPasswordView.swift in Sources */,
+				EE3CAB472C89BC1E00D48067 /* ApiCall.swift in Sources */,
 				EE0E6B872C8053C400D1AAA1 /* RegistrationViewModel.swift in Sources */,
 				EE06DE4D2C7EF0C800520DB3 /* CharacterRow.swift in Sources */,
 				EE0AA86A2C7E3C870083EA38 /* NavigationStackView.swift in Sources */,
