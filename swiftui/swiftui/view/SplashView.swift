@@ -22,6 +22,21 @@ struct SplashView: View {
                     .background(colorScheme == .dark ? .red : .green)
                     .padding()
                     .onAppear{
+                        
+                        // Usage
+                        let steak = Dish(name: "Steak", price: 2.30)
+                        let chips = Dish(name: "Ships", price: 1.20)
+                        let coffee = Dish(name: "Coffee", price: 0.80)
+                        let builder = OrderBuilder()
+                        builder.reset()
+                        builder .setMainCourse(steak)
+                        builder.setGarnish(chips)
+                        builder .setDrink(coffee)
+                        let order = builder.getResult()
+                        order?.price
+                        // Result:
+                        // 4.30
+                        
                         DispatchQueue.main.asyncAfter(deadline: .now()+5) {
                             withAnimation{
                                 self.isActive = true
