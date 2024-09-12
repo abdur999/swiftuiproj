@@ -42,6 +42,7 @@
 		EE3CAB472C89BC1E00D48067 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3CAB462C89BC1E00D48067 /* ApiCall.swift */; };
 		EE8C54F52C91A5670076D798 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C54F42C91A5670076D798 /* Builder.swift */; };
 		EE8C54F82C91B9D40076D798 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C54F72C91B9D40076D798 /* Protocol.swift */; };
+		EEB88D3B2C92ED8E007FF7BC /* HigherOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB88D3A2C92ED8E007FF7BC /* HigherOrder.swift */; };
 		EEC534012C81811D002E96DC /* CharacterReponseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC534002C81811D002E96DC /* CharacterReponseViewModel.swift */; };
 		EEC534042C81A127002E96DC /* CharacterReponsePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC534032C81A127002E96DC /* CharacterReponsePresenter.swift */; };
 		EED3F3072C8841F50042EE2A /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED3F3062C8841F50042EE2A /* CharacterView.swift */; };
@@ -107,6 +108,7 @@
 		EE3CAB462C89BC1E00D48067 /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
 		EE8C54F42C91A5670076D798 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		EE8C54F72C91B9D40076D798 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		EEB88D3A2C92ED8E007FF7BC /* HigherOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HigherOrder.swift; sourceTree = "<group>"; };
 		EEC534002C81811D002E96DC /* CharacterReponseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterReponseViewModel.swift; sourceTree = "<group>"; };
 		EEC534032C81A127002E96DC /* CharacterReponsePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterReponsePresenter.swift; sourceTree = "<group>"; };
 		EED3F3062C8841F50042EE2A /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 		EE373F132C7E224F008332B4 /* swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				EEB88D392C92ED64007FF7BC /* HigherOrderFunction */,
 				EE8C54F62C91B9C50076D798 /* Protocol */,
 				EE8C54F32C91A4C80076D798 /* Builder */,
 				EED3F3052C88387C0042EE2A /* ViperView */,
@@ -308,6 +311,14 @@
 				EE8C54F72C91B9D40076D798 /* Protocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EEB88D392C92ED64007FF7BC /* HigherOrderFunction */ = {
+			isa = PBXGroup;
+			children = (
+				EEB88D3A2C92ED8E007FF7BC /* HigherOrder.swift */,
+			);
+			path = HigherOrderFunction;
 			sourceTree = "<group>";
 		};
 		EEC534022C81A103002E96DC /* presenter */ = {
@@ -503,6 +514,7 @@
 				EE06DE4F2C7EF0E500520DB3 /* EpisodeRow.swift in Sources */,
 				EE8C54F52C91A5670076D798 /* Builder.swift in Sources */,
 				EE06DE432C7EEC9700520DB3 /* NetworkingService.swift in Sources */,
+				EEB88D3B2C92ED8E007FF7BC /* HigherOrder.swift in Sources */,
 				EEE761A22C8768440094AD20 /* CharacterResponseViperPresenter.swift in Sources */,
 				EE06DE572C7EF4E200520DB3 /* ListScreen.swift in Sources */,
 				EE06DE512C7EF11700520DB3 /* LocationRow.swift in Sources */,

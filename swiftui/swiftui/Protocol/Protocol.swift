@@ -21,55 +21,55 @@ struct Square: Shape {
         return "Drawing a square"
     }
 }
-
-func createPattern() {
-    let shape = makeShape()
-    print(shape.draw())
-}
-
-// Using protocol type
-func makeShape() -> Shape {
-    return CCircle()
-}
-
-// Using opaque type
-func makeOpaqueShape() -> some Shape {
-    return CCircle()
-}
-func pair<T: Shape>(_ shape: T) -> (some Shape, some Shape) {
-    return (shape, flip(shape))
-}
-
-
-//when you use some protocol as return type you cannot choose any of them you have to return a single type only (eg either Square or Circle)
-// 1. return same concrete type in all return paths
-// 2. Use a protocol-based return type instead of opaque types if you need flexlibility to return different types.
-
-//This function return opaque type so only one kind of object should return(only one concrete type should return, here it will be either Square or CCircle)
-func flip<T: Shape>(_ shape: T) -> some Shape {
-//    if shape is CCircle {
-        return Square()
-//    }
-//    return CCircle()
-}
-
-//This function return protocol type so we can return anytype which implement the protocol
-func gflip<T: Shape>(_ shape: T) -> Shape {
-    if shape is CCircle {
-        return Square()
+struct Execute {
+    func createPattern() {
+        let shape = makeShape()
+        print(shape.draw())
     }
-    return CCircle()
-}
-
-func createPattern2() {
-    let shape1 = makeShape()
-    let shape2 = makeOpaqueShape()
     
-    print(shape1.draw())  // Output: Drawing a circle
-    print(shape2.draw())  // Output: Drawing a circle
+    // Using protocol type
+    func makeShape() -> Shape {
+        return CCircle()
+    }
+    
+    // Using opaque type
+    func makeOpaqueShape() -> some Shape {
+        return CCircle()
+    }
+    func pair<T: Shape>(_ shape: T) -> (some Shape, some Shape) {
+        return (shape, flip(shape))
+    }
+    
+    
+    //when you use some protocol as return type you cannot choose any of them you have to return a single type only (eg either Square or Circle)
+    // 1. return same concrete type in all return paths
+    // 2. Use a protocol-based return type instead of opaque types if you need flexlibility to return different types.
+    
+    //This function return opaque type so only one kind of object should return(only one concrete type should return, here it will be either Square or CCircle)
+    func flip<T: Shape>(_ shape: T) -> some Shape {
+        //    if shape is CCircle {
+        return Square()
+        //    }
+        //    return CCircle()
+    }
+    
+    //This function return protocol type so we can return anytype which implement the protocol
+    func gflip<T: Shape>(_ shape: T) -> Shape {
+        if shape is CCircle {
+            return Square()
+        }
+        return CCircle()
+    }
+    
+    func createPattern2() {
+        let shape1 = makeShape()
+        let shape2 = makeOpaqueShape()
+        
+        print(shape1.draw())  // Output: Drawing a circle
+        print(shape2.draw())  // Output: Drawing a circle
+    }
+    
 }
-
-
 /*
  OPAQUE TYPE (some protocol)
  Advantages:

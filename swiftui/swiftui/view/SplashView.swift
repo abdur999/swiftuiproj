@@ -33,9 +33,15 @@ struct SplashView: View {
                         builder.setGarnish(chips)
                         builder .setDrink(coffee)
                         let order = builder.getResult()
-                        order?.price
+                        print(order?.price)
                         // Result:
                         // 4.30
+                        
+                        let exec = Execute()
+                        exec.createPattern2()
+                        
+                        let higherOrder = HigherOrder()
+                        higherOrder.mapplyOperation()
                         
                         DispatchQueue.main.asyncAfter(deadline: .now()+5) {
                             withAnimation{
