@@ -40,6 +40,7 @@
 		EE373F312C7E2251008332B4 /* swiftuiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE373F302C7E2251008332B4 /* swiftuiUITests.swift */; };
 		EE373F332C7E2251008332B4 /* swiftuiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE373F322C7E2251008332B4 /* swiftuiUITestsLaunchTests.swift */; };
 		EE3CAB472C89BC1E00D48067 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3CAB462C89BC1E00D48067 /* ApiCall.swift */; };
+		EE5DBC3E2C944F22006CC96A /* KvoKvc.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5DBC3D2C944F22006CC96A /* KvoKvc.swift */; };
 		EE8C54F52C91A5670076D798 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C54F42C91A5670076D798 /* Builder.swift */; };
 		EE8C54F82C91B9D40076D798 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C54F72C91B9D40076D798 /* Protocol.swift */; };
 		EEB88D3B2C92ED8E007FF7BC /* HigherOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB88D3A2C92ED8E007FF7BC /* HigherOrder.swift */; };
@@ -107,6 +108,7 @@
 		EE373F302C7E2251008332B4 /* swiftuiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftuiUITests.swift; sourceTree = "<group>"; };
 		EE373F322C7E2251008332B4 /* swiftuiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftuiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EE3CAB462C89BC1E00D48067 /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
+		EE5DBC3D2C944F22006CC96A /* KvoKvc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KvoKvc.swift; sourceTree = "<group>"; };
 		EE8C54F42C91A5670076D798 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		EE8C54F72C91B9D40076D798 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		EEB88D3A2C92ED8E007FF7BC /* HigherOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HigherOrder.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 		EE373F132C7E224F008332B4 /* swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				EE5DBC3C2C944F0D006CC96A /* KVOKVC */,
 				EEB88D3C2C9335E9007FF7BC /* UsefulProtocols */,
 				EEB88D392C92ED64007FF7BC /* HigherOrderFunction */,
 				EE8C54F62C91B9C50076D798 /* Protocol */,
@@ -298,6 +301,14 @@
 				EE373F322C7E2251008332B4 /* swiftuiUITestsLaunchTests.swift */,
 			);
 			path = swiftuiUITests;
+			sourceTree = "<group>";
+		};
+		EE5DBC3C2C944F0D006CC96A /* KVOKVC */ = {
+			isa = PBXGroup;
+			children = (
+				EE5DBC3D2C944F22006CC96A /* KvoKvc.swift */,
+			);
+			path = KVOKVC;
 			sourceTree = "<group>";
 		};
 		EE8C54F32C91A4C80076D798 /* Builder */ = {
@@ -530,6 +541,7 @@
 				EE06DE572C7EF4E200520DB3 /* ListScreen.swift in Sources */,
 				EEB88D3E2C93361F007FF7BC /* UsefulProtocol.swift in Sources */,
 				EE06DE512C7EF11700520DB3 /* LocationRow.swift in Sources */,
+				EE5DBC3E2C944F22006CC96A /* KvoKvc.swift in Sources */,
 				EE06DE532C7EF41600520DB3 /* DashBoardView.swift in Sources */,
 				EE06DE3B2C7EE33600520DB3 /* MultiOrbit.swift in Sources */,
 				EE373F152C7E224F008332B4 /* swiftuiApp.swift in Sources */,
