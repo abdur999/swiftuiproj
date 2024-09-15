@@ -60,5 +60,5 @@ extension Dog {
 }
 
 final class Employee {
-    func canCode() -> Bool { } // Static
+    func canCode() -> Bool { return true } // Static changes for return statement 
 }
