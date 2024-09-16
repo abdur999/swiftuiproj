@@ -25,6 +25,7 @@
 		EE06DE592C7F01B400520DB3 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE582C7F01B400520DB3 /* RegisterView.swift */; };
 		EE06DE5B2C7F01E800520DB3 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE5A2C7F01E800520DB3 /* ForgotPasswordView.swift */; };
 		EE06DE5D2C7F021E00520DB3 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06DE5C2C7F021E00520DB3 /* OTPView.swift */; };
+		EE072B472C9824BB003831BE /* DeepDiveCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE072B462C9824BB003831BE /* DeepDiveCombine.swift */; };
 		EE0AA8662C7E3A3E0083EA38 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AA8652C7E3A3E0083EA38 /* LoginView.swift */; };
 		EE0AA8682C7E3C4E0083EA38 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AA8672C7E3C4E0083EA38 /* SplashView.swift */; };
 		EE0AA86A2C7E3C870083EA38 /* NavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AA8692C7E3C870083EA38 /* NavigationStackView.swift */; };
@@ -91,6 +92,7 @@
 		EE06DE582C7F01B400520DB3 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		EE06DE5A2C7F01E800520DB3 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		EE06DE5C2C7F021E00520DB3 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		EE072B462C9824BB003831BE /* DeepDiveCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepDiveCombine.swift; sourceTree = "<group>"; };
 		EE0AA8652C7E3A3E0083EA38 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		EE0AA8672C7E3C4E0083EA38 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		EE0AA8692C7E3C870083EA38 /* NavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackView.swift; sourceTree = "<group>"; };
@@ -206,6 +208,14 @@
 			path = row;
 			sourceTree = "<group>";
 		};
+		EE072B452C981968003831BE /* DeepDiveCombine */ = {
+			isa = PBXGroup;
+			children = (
+				EE072B462C9824BB003831BE /* DeepDiveCombine.swift */,
+			);
+			path = DeepDiveCombine;
+			sourceTree = "<group>";
+		};
 		EE0E6B822C804F6700D1AAA1 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +269,7 @@
 		EE373F132C7E224F008332B4 /* swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				EE072B452C981968003831BE /* DeepDiveCombine */,
 				EECA14B42C971079002E9DA3 /* Closure */,
 				EE5DBC3F2C947BE6006CC96A /* Dispatch */,
 				EE5DBC3C2C944F0D006CC96A /* KVOKVC */,
@@ -563,6 +574,7 @@
 				EEB88D3B2C92ED8E007FF7BC /* HigherOrder.swift in Sources */,
 				EEE761A22C8768440094AD20 /* CharacterResponseViperPresenter.swift in Sources */,
 				EE06DE572C7EF4E200520DB3 /* ListScreen.swift in Sources */,
+				EE072B472C9824BB003831BE /* DeepDiveCombine.swift in Sources */,
 				EEB88D3E2C93361F007FF7BC /* UsefulProtocol.swift in Sources */,
 				EE06DE512C7EF11700520DB3 /* LocationRow.swift in Sources */,
 				EE5DBC3E2C944F22006CC96A /* KvoKvc.swift in Sources */,
